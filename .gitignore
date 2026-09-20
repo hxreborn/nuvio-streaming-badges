@@ -1,1 +1,9 @@
 node_modules/
+.cache/
+.directory
+
+build.js
+merge.js
+upstream.json
+tools/
+art/

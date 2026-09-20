@@ -1,68 +1,54 @@
-# Nuvio badges: Spanish streaming services
+# Nuvio Streaming Badges
 
-Fusion badge rules for Nuvio covering the services people in Spain actually
-subscribe to. No other published pack carries any of them.
+A minimalist badge set for Nuvio:
+[chreid1973/3hpm-nuvio-wizard](https://github.com/chreid1973/3hpm-nuvio-wizard)
+plus 9 new streaming services: Filmin, FlixOlé, Movistar Plus+, SkyShowtime,
+Atres Player, Acontra Plus, Tivify, MUBI and Rakuten TV.
 
-Movistar Plus+ · Filmin · SkyShowtime · FlixOlé · MUBI · Rakuten TV ·
-Atres Player · Crunchyroll
+![the pack](preview.png)
 
-| Mono | Colour |
-| --- | --- |
-| ![mono](preview-mono.png) | ![colour](preview-color.png) |
-
-## Which file
-
-| File | Badges | Use it when |
-| --- | --- | --- |
-| `badges-es-mono.json` | 8 | White on transparent, to sit beside a monochrome pack. |
-| `badges-es-color.json` | 8 | Full-colour service tiles. |
-| `badges-all.json` | 56 | One URL instead of two: a complete pack with these eight folded in. |
-
-Nuvio accepts three Fusion badge URLs, so either eight-badge variant drops in
-beside the pack you already run. Paste the raw URL under Streams, Fusion badge
-URLs.
+Each badge in the JSON is a regex. Nuvio runs it over the stream's description
+and draws the badge on a match:
 
 ```
-https://raw.githubusercontent.com/hxreborn/nuvio-badges-es/main/badges-es-mono.json
-https://raw.githubusercontent.com/hxreborn/nuvio-badges-es/main/badges-es-color.json
-https://raw.githubusercontent.com/hxreborn/nuvio-badges-es/main/badges-all.json
+🍿 FILMIN      (?i)\bfilmin(?:[\s._-]?plus)?\b
+🍿 SKYSHOWTIME (?i)\bsky[\s._-]?showtime\b
 ```
 
-## What the rules match
+Every rule is reviewed against upstream, and the broken ones fixed.
 
-Each rule matches the service name in a stream row's text, so the row has to
-name the service for the badge to draw. Reseller and ad-tier strings resolve to
-the parent service, so `Movistar Plus+ Ficción Total` badges as Movistar and
-`Filmin Plus` as Filmin.
+A streaming badge needs the service named in the description, so your addon has
+to put it there.
 
-`badges-all.json` also repairs the upstream Crunchyroll rule. The original is
-`\bcrunch\b`, which requires `crunch` as a whole word and so never fires on
-`Crunchyroll`.
+## Setup
+
+1. Import a badge set in Nuvio, under Streams, Fusion badge URLs. Nuvio holds
+   three URLs but runs one at a time, so use the complete pack:
+
+   ```
+   https://raw.githubusercontent.com/hxreborn/nuvio-streaming-badges/main/badges-all.json
+   ```
+
+   |                              |                                                                     |
+   | ---------------------------- | ------------------------------------------------------------------- |
+   | `badges-all.json`            | the whole pack, 58 badges                   |
+   | `badges-streaming-mono.json` | the 19 services on their own                |
+
+2. Check your addon puts the service name in the stream description. Without it
+   no streaming badge ever fires.
 
 ## Artwork
 
-600x300 PNG. The mono set is white on transparent; the colour set keeps the
-service's own tile. Both derive from the provider logos TMDB publishes.
+Every image is hosted here, so nothing breaks if a source repo moves. The new
+logos are white on transparency, 160 px tall and trimmed to the mark, so width
+varies with the logo.
 
-## Rebuilding
+| Badges | Art by |
+| --- | --- |
+| Netflix, Prime Video, Apple TV+, Disney+, HBO Max, Hulu, Peacock, Paramount+, Crave, Crunchyroll | [je19921](https://github.com/je19921/cardgenerator.github.io) |
+| Atres Player, Movistar Plus+, MUBI, Rakuten TV, SkyShowtime | [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:SVG_logos_of_video_streaming_services) |
+| Filmin, FlixOlé, Acontra Plus, Tivify | [filmin.es](https://www.filmin.es/), [flixole.com](https://www.flixole.com/), [acontraplus.com](https://www.acontraplus.com/), [tivify.es](https://www.tivify.es/) |
+| the other 29 | [9mousaa](https://github.com/9mousaa/BetterFormatter) and [je19921](https://github.com/je19921/cardgenerator.github.io) |
 
-```sh
-node build.js https://raw.githubusercontent.com/hxreborn/nuvio-badges-es/main
-node merge.js https://raw.githubusercontent.com/hxreborn/nuvio-badges-es/main
-```
-
-Both scripts self-test and exit non-zero on failure: every service name must
-light exactly one badge, no global service may leak into a Spanish rule, the
-reseller strings must resolve to their parent, every referenced image must
-exist, and filter ids must stay unique.
-
-## Credit
-
-- [Badger](https://nintle.github.io/Badger/) by Nintle, the editor these files target.
-- `badges-all.json` builds on `badges-mono.json` from
-  [chreid1973/3hpm-nuvio-wizard](https://github.com/chreid1973/3hpm-nuvio-wizard),
-  whose artwork comes from
-  [9mousaa/BetterFormatter](https://github.com/9mousaa/BetterFormatter) and
-  [je19921/cardgenerator.github.io](https://github.com/je19921/cardgenerator.github.io).
-- Provider logos from [TMDB](https://www.themoviedb.org/). This project is not
-  endorsed or certified by TMDB.
+Editor: [Badger](https://nintle.github.io/Badger/) by Nintle. Trademarks belong
+to their owners; this project isn't endorsed by any of them.
