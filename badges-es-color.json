@@ -1,0 +1,117 @@
+{
+ "filters": [
+  {
+   "borderColor": "#00000000",
+   "tagColor": "#00000000",
+   "tagStyle": "transparent",
+   "textColor": "#FFFFFF",
+   "groupId": "gesc",
+   "id": "gesc-movistarplus",
+   "imageURL": "https://raw.githubusercontent.com/hxreborn/nuvio-badges-es/main/images/color-movistarplus.png",
+   "isEnabled": true,
+   "name": "🍿 MOVISTAR PLUS+",
+   "pattern": "(?i)\\bmovistar(?:[\\s._-]?plus\\+?)?\\b",
+   "type": "filter"
+  },
+  {
+   "borderColor": "#00000000",
+   "tagColor": "#00000000",
+   "tagStyle": "transparent",
+   "textColor": "#FFFFFF",
+   "groupId": "gesc",
+   "id": "gesc-filmin",
+   "imageURL": "https://raw.githubusercontent.com/hxreborn/nuvio-badges-es/main/images/color-filmin.png",
+   "isEnabled": true,
+   "name": "🍿 FILMIN",
+   "pattern": "(?i)\\bfilmin(?:[\\s._-]?plus)?\\b",
+   "type": "filter"
+  },
+  {
+   "borderColor": "#00000000",
+   "tagColor": "#00000000",
+   "tagStyle": "transparent",
+   "textColor": "#FFFFFF",
+   "groupId": "gesc",
+   "id": "gesc-skyshowtime",
+   "imageURL": "https://raw.githubusercontent.com/hxreborn/nuvio-badges-es/main/images/color-skyshowtime.png",
+   "isEnabled": true,
+   "name": "🍿 SKYSHOWTIME",
+   "pattern": "(?i)\\bsky[\\s._-]?showtime\\b",
+   "type": "filter"
+  },
+  {
+   "borderColor": "#00000000",
+   "tagColor": "#00000000",
+   "tagStyle": "transparent",
+   "textColor": "#FFFFFF",
+   "groupId": "gesc",
+   "id": "gesc-flixole",
+   "imageURL": "https://raw.githubusercontent.com/hxreborn/nuvio-badges-es/main/images/color-flixole.png",
+   "isEnabled": true,
+   "name": "🍿 FLIXOLÉ",
+   "pattern": "(?i)\\bflix[\\s._-]?ol[eé]",
+   "type": "filter"
+  },
+  {
+   "borderColor": "#00000000",
+   "tagColor": "#00000000",
+   "tagStyle": "transparent",
+   "textColor": "#FFFFFF",
+   "groupId": "gesc",
+   "id": "gesc-mubi",
+   "imageURL": "https://raw.githubusercontent.com/hxreborn/nuvio-badges-es/main/images/color-mubi.png",
+   "isEnabled": true,
+   "name": "🍿 MUBI",
+   "pattern": "(?i)\\bmubi\\b",
+   "type": "filter"
+  },
+  {
+   "borderColor": "#00000000",
+   "tagColor": "#00000000",
+   "tagStyle": "transparent",
+   "textColor": "#FFFFFF",
+   "groupId": "gesc",
+   "id": "gesc-rakutentv",
+   "imageURL": "https://raw.githubusercontent.com/hxreborn/nuvio-badges-es/main/images/color-rakutentv.png",
+   "isEnabled": true,
+   "name": "🍿 RAKUTEN TV",
+   "pattern": "(?i)\\brakuten(?:[\\s._-]?tv)?\\b",
+   "type": "filter"
+  },
+  {
+   "borderColor": "#00000000",
+   "tagColor": "#00000000",
+   "tagStyle": "transparent",
+   "textColor": "#FFFFFF",
+   "groupId": "gesc",
+   "id": "gesc-atresplayer",
+   "imageURL": "https://raw.githubusercontent.com/hxreborn/nuvio-badges-es/main/images/color-atresplayer.png",
+   "isEnabled": true,
+   "name": "🍿 ATRES PLAYER",
+   "pattern": "(?i)\\batres[\\s._-]?player\\b",
+   "type": "filter"
+  },
+  {
+   "borderColor": "#00000000",
+   "tagColor": "#00000000",
+   "tagStyle": "transparent",
+   "textColor": "#FFFFFF",
+   "groupId": "gesc",
+   "id": "gesc-crunchyroll",
+   "imageURL": "https://raw.githubusercontent.com/hxreborn/nuvio-badges-es/main/images/color-crunchyroll.png",
+   "isEnabled": true,
+   "name": "🍿 CRUNCHYROLL",
+   "pattern": "(?i)\\b(?:crunchyroll|crunchy|crunch)\\b",
+   "type": "filter"
+  }
+ ],
+ "groups": [
+  {
+   "borderColor": "#FF858283",
+   "color": "#000000",
+   "id": "gesc",
+   "isExpanded": true,
+   "name": "Streaming ES"
+  }
+ ]
+}
